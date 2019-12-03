@@ -81,11 +81,22 @@ public class History3DLottery {
                     info.setCurrentOmission(mList.size() - interval.get(interval.size() - 1));
                     thirdinfoList.add(info);
                 }
-
-                Collections.sort(thirdinfoList, new Comparator<Thirdinfo>() {
+                /**
+                 * 根据出现次数
+                 */
+               /* Collections.sort(thirdinfoList, new Comparator<Thirdinfo>() {
                     @Override
                     public int compare(Thirdinfo thirdinfo, Thirdinfo t1) {
                         return t1.getOpenCount() - thirdinfo.getOpenCount();
+                    }
+                });*/
+                /**
+                 * 根据遗漏值大小
+                 */
+                Collections.sort(thirdinfoList, new Comparator<Thirdinfo>() {
+                    @Override
+                    public int compare(Thirdinfo thirdinfo, Thirdinfo t1) {
+                        return t1.getCurrentOmission() - thirdinfo.getCurrentOmission();
                     }
                 });
 
@@ -96,10 +107,18 @@ public class History3DLottery {
                 HSSFWorkbook workbook = new HSSFWorkbook();
                 // 创建工作表
                 HSSFSheet sheet = workbook.createSheet("sheet1");
+                HSSFRow rowsTitle = sheet.createRow(0);
+                rowsTitle.createCell(0).setCellValue("开奖号码");
+                rowsTitle.createCell(1).setCellValue("开出次数");
+                rowsTitle.createCell(2).setCellValue("当前遗漏");
+
+                for (int i = 0; i < 100; i++) {
+                    rowsTitle.createCell(i + 3).setCellValue("第" + i + "次出现");
+                }
 
                 for (int i = 0; i < thirdinfoList.size(); i++) {
                     Thirdinfo thirdinfo = thirdinfoList.get(i);
-                    HSSFRow rows = sheet.createRow(i);
+                    HSSFRow rows = sheet.createRow(i + 1);
                     rows.createCell(0).setCellValue(thirdinfo.getOpenNums());
                     rows.createCell(1).setCellValue(String.valueOf(thirdinfo.getOpenCount()));
                     rows.createCell(2).setCellValue(String.valueOf(thirdinfo.getCurrentOmission()));
