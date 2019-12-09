@@ -1,16 +1,19 @@
-package lottery.shishi;
+package lottery.other;
 
-import lottery.Model3D;
 import lottery.ThirdLotteryUtils;
-import lottery.Thirdinfo;
+import lottery.shishi.SSCInterval;
+import lottery.shishi.SSCModel;
+import lottery.shishi.SSCType;
+import lottery.shishi.Sign;
 import lottery.third3d.Third3Type;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.CellType;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.LinkedList;
 
 
 /**
@@ -21,12 +24,12 @@ import java.util.*;
  * 组选10     3(豹子)+2(对子)
  * 组选5      4(炸弹)+1
  */
-public class HistorySSCLottery {
+public class XinJiangLottery {
 
     public static void main(String[] args) {
 
         File file = new File(
-                Sign.SHISHI_PATH);
+                Sign.XIN_JIANG_PATH);
 
 
         if (file.isFile() && file.exists()) {
@@ -43,7 +46,9 @@ public class HistorySSCLottery {
                 String line = "";
                 int sequenceNums = 0;
                 while ((line = bufferedReader.readLine()) != null) {
+
                     if (!isEmpty(line) && sequenceNums > 0) {
+
                         String[] current = line.split("  ");
                         String arr0 = String.valueOf(sequenceNums);
                         String arr1 = current[0];
@@ -53,30 +58,6 @@ public class HistorySSCLottery {
                         mList.add(new SSCModel(arr0, arr1, arr2));
                     }
                     sequenceNums += 1;
-
-                  /*  if (!isEmpty(line)) {
-                        String[] current = line.split("\t\t\t");
-                        if (current.length > 2) {
-
-                            String arr0 = String.valueOf(sequenceNums);
-                            String arr1 = current[0];
-                            arr1 = arr1.replace("-", "");
-                            String arr2 = current[1];
-
-                            mList.add(new SSCModel(arr0, arr1, arr2));
-                            sequenceNums += 1;
-
-                           *//* String arr0 = current[0];
-                            String arr1 = current[1];
-                            String arr2 = current[2];
-
-                            System.out.println("当前序号    " + current[0]);
-                            System.out.println("当前期号    " + current[1]);
-                            System.out.println("当前号码    " + current[2]);
-
-                            mList.add(new SSCModel(arr0, arr1, arr2.replace(",", "")));*//*
-                        }
-                    }*/
                 }
 
                 System.out.println("总共统计期数  " + mList.size());
@@ -240,8 +221,14 @@ public class HistorySSCLottery {
                         mList.size() - interval_10.getLast()));
                 sscIntervalList.add(new SSCInterval("组选5", total_5, interval_5,
                         mList.size() - interval_5.getLast()));
-                sscIntervalList.add(new SSCInterval("五星钻豹", total_1, interval_1,
-                        mList.size() - interval_1.getLast()));
+                if (null != interval_1 && interval_1.size() > 0) {
+                    sscIntervalList.add(new SSCInterval("五星钻豹", total_1, interval_1,
+                            mList.size() - interval_1.getLast()));
+                } else {
+                    sscIntervalList.add(new SSCInterval("五星钻豹", total_1, interval_1,
+                            mList.size()));
+                }
+
 
                 /**
                  * 前三
@@ -331,7 +318,7 @@ public class HistorySSCLottery {
                     rows.createCell(4).setCellValue(openNumsInterva);
                 }
 
-                File xlsFile = new File("重庆时时.xls");
+                File xlsFile = new File("新疆时时.xls");
                 FileOutputStream xlsStream = new FileOutputStream(xlsFile);
                 workbook.write(xlsStream);
 
