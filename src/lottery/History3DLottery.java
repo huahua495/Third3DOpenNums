@@ -16,7 +16,7 @@ public class History3DLottery {
     public static void main(String[] args) {
 
         File file = new File(
-                "D:/WorkSpace/IdeaProjects/Third3DOpenNums/src/lottery/3D.txt");
+                "D:/WorkSpace/IdeaProjects/Third3DOpenNums/src/lottery/БЊзг.txt");
 
 
         if (file.isFile() && file.exists()) {
