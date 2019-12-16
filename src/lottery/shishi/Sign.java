@@ -9,4 +9,6 @@ public class Sign {
     public static final String TIAN_JIN_PATH = "D:/WorkSpace/IdeaProjects/Third3DOpenNums/src/lottery/other/tianjin.txt";
     public static final String XIN_JIANG_PATH = "D:/WorkSpace/IdeaProjects/Third3DOpenNums/src/lottery/other/xinjiang.txt";
     public static final String HEILONG_JIANG_PATH = "D:/WorkSpace/IdeaProjects/Third3DOpenNums/src/lottery/other/heilongjiang.txt";
+    public static final String THIRD_3D_OMISSION = "D:/WorkSpace/IdeaProjects/Third3DOpenNums/src/lottery/third3d/ThirdOmissionGroup6.txt";
+    public static final String THIRD_3D_OMISSION_GROUP3 = "D:/WorkSpace/IdeaProjects/Third3DOpenNums/src/lottery/third3d/ThirdOmissionGroup3.txt";
 }

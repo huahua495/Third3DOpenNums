@@ -1,16 +1,15 @@
 package lottery.shishi;
 
-import lottery.Model3D;
 import lottery.ThirdLotteryUtils;
-import lottery.Thirdinfo;
 import lottery.third3d.Third3Type;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.CellType;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.LinkedList;
 
 
 /**
@@ -21,7 +20,7 @@ import java.util.*;
  * 组选10     3(豹子)+2(对子)
  * 组选5      4(炸弹)+1
  */
-public class HistorySSCLottery {
+public class HistorySSC_012 {
 
     public static void main(String[] args) {
 
@@ -114,6 +113,10 @@ public class HistorySSCLottery {
                 int total_housan_3 = 0;
                 int total_housan_leopard = 0;
 
+                int total_cutof_0 = 0;
+                int total_cutof_1 = 0;
+                int total_cutof_2 = 0;
+
 
                 LinkedList<Integer> interval_120 = new LinkedList<>();
                 LinkedList<Integer> interval_60 = new LinkedList<>();
@@ -137,6 +140,11 @@ public class HistorySSCLottery {
                 LinkedList<Integer> interval_housan_6 = new LinkedList<>();
                 LinkedList<Integer> interval_housan_3 = new LinkedList<>();
                 LinkedList<Integer> interval_housan_leopard = new LinkedList<>();
+
+
+                LinkedList<Integer> interval_cut_0 = new LinkedList<>();
+                LinkedList<Integer> interval_cut_1 = new LinkedList<>();
+                LinkedList<Integer> interval_cut_2 = new LinkedList<>();
 
                 /**
                  * 五星

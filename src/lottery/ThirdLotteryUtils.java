@@ -25,7 +25,32 @@ public class ThirdLotteryUtils {
                 }
             }
         }
+        return linkedNums;
+    }
 
+    public static LinkedHashSet<String> findAllCombinationNumsSSC(SSCType type) {
+        LinkedHashSet<String> linkedNums = new LinkedHashSet<>();
+        for (int i = 0; i < 10; i++) {
+            String wan = String.valueOf(i);
+            for (int j = 0; j < 10; j++) {
+                String qian = String.valueOf(j);
+                for (int k = 0; k < 10; k++) {
+                    String bai = String.valueOf(k);
+
+                    for (int l = 0; l < 10; l++) {
+                        String shi = String.valueOf(l);
+                        for (int m = 0; m < 10; m++) {
+                            String ge = String.valueOf(m);
+                            String result = wan + qian + bai + shi + ge;
+                            SSCType resultType=findOpenNumsType(result);
+                            if (resultType==type){
+                                linkedNums.add(sortString(result));
+                            }
+                        }
+                    }
+                }
+            }
+        }
         return linkedNums;
     }
 
