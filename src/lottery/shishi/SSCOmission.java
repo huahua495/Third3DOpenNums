@@ -64,9 +64,11 @@ public class SSCOmission {
                 });
 
 
-                SSCType[] sscTypeArr = new SSCType[]{SSCType.GROUP_120, SSCType.GROUP_60,
+                SSCType[] sscTypeArr = new SSCType[]{SSCType.GROUP_120
+                      /*  , SSCType.GROUP_60,
                         SSCType.GROUP_30, SSCType.GROUP_20,
-                        SSCType.GROUP_10, SSCType.GROUP_5, SSCType.GROUP_1};
+                        SSCType.GROUP_10, SSCType.GROUP_5, SSCType.GROUP_1*/
+                };
 
                 LinkedHashSet<String> allList = new LinkedHashSet<>();
 
@@ -110,12 +112,12 @@ public class SSCOmission {
                 /**
                  * 根据出现次数值大小
                  */
-              /*  Collections.sort(thirdinfoList, new Comparator<Thirdinfo>() {
+                Collections.sort(thirdinfoList, new Comparator<Thirdinfo>() {
                     @Override
                     public int compare(Thirdinfo thirdinfo, Thirdinfo t1) {
                         return t1.getOpenCount() - thirdinfo.getOpenCount();
                     }
-                });*/
+                });
                 /**
                  * 根据遗漏值大小
                  */
