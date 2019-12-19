@@ -1,8 +1,8 @@
 package lottery.shishi;
 
 public class Sign {
-    public static final String relplaceStr = "D:/WorkSpace/IdeaProjects";
-//    public static final String relplaceStr = "D:/IdeaProject";
+//    public static final String relplaceStr = "D:/WorkSpace/IdeaProjects";
+    public static final String relplaceStr = "D:/IdeaProject";
 
 
     public static final String SHISHI_PATH = relplaceStr + "/Third3DOpenNums/src/lottery/shishi/shishi.txt";
