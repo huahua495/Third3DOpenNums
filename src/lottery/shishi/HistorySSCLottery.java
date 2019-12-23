@@ -305,14 +305,14 @@ public class HistorySSCLottery {
                     String openNumsInterva = "";
                     for (int j = 0; j < integerArrayList.size(); j++) {
                         if (j == 0) {
-                            openNumsInterva += "*" + "--";
+                            openNumsInterva += "*" + "-";
                         } else {
 //                            System.out.println("号码类型    " + sscInterval.getSscNumsType());
 //                            System.out.println("上期开出期号  " + integerArrayList.get(j - 1));
 //                            System.out.println("本期开出期号  " + integerArrayList.get(j));
 
                             int Difference = integerArrayList.get(j) - integerArrayList.get(j - 1);
-                            openNumsInterva += (String.valueOf(Difference)) + "--";
+                            openNumsInterva += (String.valueOf(Difference)) + "-";
                             maxList.add(Difference);
                         }
                     }
