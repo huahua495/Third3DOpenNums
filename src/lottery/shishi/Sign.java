@@ -1,8 +1,8 @@
 package lottery.shishi;
 
 public class Sign {
-//    public static final String relplaceStr = "D:/WorkSpace/IdeaProjects";
-    public static final String relplaceStr = "D:/IdeaProject";
+    public static final String relplaceStr = "D:/WorkSpace/IdeaProjects";
+//    public static final String relplaceStr = "D:/IdeaProject";
 
 
     public static final String SHISHI_PATH = relplaceStr + "/Third3DOpenNums/src/lottery/shishi/shishi.txt";
@@ -15,4 +15,11 @@ public class Sign {
     public static final String HEILONG_JIANG_PATH = relplaceStr + "/Third3DOpenNums/src/lottery/other/heilongjiang.txt";
     public static final String THIRD_3D_OMISSION = relplaceStr + "/Third3DOpenNums/src/lottery/third3d/ThirdOmissionGroup6.txt";
     public static final String THIRD_3D_OMISSION_GROUP3 = relplaceStr + "/Third3DOpenNums/src/lottery/third3d/ThirdOmissionGroup3.txt";
+
+
+    public static final String SHISHI_DATA_PATH = relplaceStr + "/Third3DOpenNums/src/lottery/other/shishi_data.txt";
+    public static final String TIANJIN_DATA_PATH = relplaceStr + "/Third3DOpenNums/src/lottery/other/tianjin_data.txt";
+    public static final String XINJIANG_DATA_PATH = relplaceStr + "/Third3DOpenNums/src/lottery/other/xinjiang_data.txt";
+
+
 }

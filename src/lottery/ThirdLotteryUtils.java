@@ -215,5 +215,11 @@ public class ThirdLotteryUtils {
         return mList;
     }
 
-
+    public static boolean isEmpty(String... strings) {
+        for (String str : strings) {
+            if (str == null || str.trim().length() == 0)
+                return true;
+        }
+        return false;
+    }
 }
