@@ -1,6 +1,7 @@
 package lottery.global;
 
 import lottery.ThirdLotteryUtils;
+import lottery.other.HeiLoingJiangLottery;
 import lottery.other.TianJinLottery;
 import lottery.other.XinJiangLottery;
 import lottery.shishi.HistorySSCLottery;
@@ -14,10 +15,12 @@ public class StartUpSwitch {
         readDataToShishiFile(Sign.SHISHI_DATA_PATH, Sign.SHISHI_PATH);
         readDataToShishiFile(Sign.TIANJIN_DATA_PATH, Sign.TIAN_JIN_PATH);
         readDataToShishiFile(Sign.XINJIANG_DATA_PATH, Sign.XIN_JIANG_PATH);
+        readDataToShishiFile(Sign.HEI_LONG_JIANG_DATA_PATH, Sign.HEILONG_JIANG_PATH);
 
         HistorySSCLottery.createShishiFile();
         TianJinLottery.createTianJinFile();
         XinJiangLottery.createXinJiangFile();
+        HeiLoingJiangLottery.createHLJgFile();
     }
 
     /**
