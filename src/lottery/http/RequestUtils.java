@@ -11,7 +11,8 @@ import java.util.Map;
 public class RequestUtils {
 
     public static void main(String[] args) {
-        LotteryContent(Sign.CQ_SSC_ID,"20191102-011");
+//        LotteryContent(Sign.CQ_SSC_ID,"20191102-011");
+        httpGet("https://tools.17500.cn/tb/cqssc/chgs?limit=200");
     }
 
 

@@ -20,6 +20,7 @@ import java.util.*;
  * 组选20     3(豹子)+1+1
  * 组选10     3(豹子)+2(对子)
  * 组选5      4(炸弹)+1
+ *
  */
 public class HistorySSCLottery {
 
