@@ -8,6 +8,7 @@ import java.util.*;
 
 public class ThirdLotteryUtils {
 
+
     public static LinkedHashSet<String> findAllCombinationNums() {
 //       ArrayList<String> allNums = new ArrayList<>();
 
@@ -36,14 +37,13 @@ public class ThirdLotteryUtils {
                 String qian = String.valueOf(j);
                 for (int k = 0; k < 10; k++) {
                     String bai = String.valueOf(k);
-
                     for (int l = 0; l < 10; l++) {
                         String shi = String.valueOf(l);
                         for (int m = 0; m < 10; m++) {
                             String ge = String.valueOf(m);
                             String result = wan + qian + bai + shi + ge;
-                            SSCType resultType=findOpenNumsType(result);
-                            if (resultType==type){
+                            SSCType resultType = findOpenNumsType(result);
+                            if (resultType == type) {
                                 linkedNums.add(sortString(result));
                             }
                         }
@@ -80,6 +80,7 @@ public class ThirdLotteryUtils {
 
         return linkedNums;
     }
+
 
 
     public static String sortString(String result) {
