@@ -28,4 +28,7 @@ public class Sign {
     public static final String BASE_REQUEST_URL = "http://open.liupai.net/lottery/history";
     public static final String APPKEY = "a788b55419658d75643eba6cc4ed2dc6";
     public static final String CQ_SSC_ID = "73";
+
+
+    public static final String P5_PATH = relplaceStr + "/Third3DOpenNums/src/lottery/other/PL5.txt";
 }
