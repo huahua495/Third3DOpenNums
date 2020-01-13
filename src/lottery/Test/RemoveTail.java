@@ -11,8 +11,6 @@ import java.util.Set;
 public class RemoveTail {
     public static void main(String[] args) {
 
-
-
         /**
          * ËùÓĞÎ²°Í
          */

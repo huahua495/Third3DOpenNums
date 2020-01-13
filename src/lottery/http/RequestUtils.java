@@ -12,11 +12,12 @@ public class RequestUtils {
 
     public static void main(String[] args) {
 //        LotteryContent(Sign.CQ_SSC_ID,"20191102-011");
-        httpGet("https://tools.17500.cn/tb/cqssc/chgs?limit=200");
+        String result = httpGet("https://tools.17500.cn/tb/tjssc/chgs?limit=200");
+        System.out.println(result);
     }
 
 
-    public static void LotteryContent(String requestId,String delineNums) {
+    public static void LotteryContent(String requestId, String delineNums) {
         String requestUrl = Sign.BASE_REQUEST_URL;
         requestUrl = requestUrl.concat("?").concat("appkey=").concat(Sign.APPKEY)
                 .concat("&issueno=").concat(delineNums)
@@ -33,7 +34,9 @@ public class RequestUtils {
      *
      * @param methodUrl
      */
-    private static void httpGet(String methodUrl) {
+    private static String httpGet(String methodUrl) {
+        String resultData = "";
+
         HttpURLConnection connection = null;
         BufferedReader reader = null;
         String line = null;
@@ -47,9 +50,20 @@ public class RequestUtils {
                 StringBuilder result = new StringBuilder();
                 // 循环读取流
                 while ((line = reader.readLine()) != null) {
-                    result.append(line).append(System.getProperty("line.separator"));// "\n"
+                    if (line.contains("_.unescape")) {
+                        line = line.replace("&quot;", String.valueOf('"'));
+
+                        int index = line.indexOf(String.valueOf("{"));
+                        int lasLastIndex = line.lastIndexOf("}");
+
+                        line = line.substring(index, lasLastIndex);
+//                        System.out.println(line);
+                        resultData = line;
+                    }
+//                    result.append(line).append(System.getProperty("line.separator"));// "\n"
+
+
                 }
-                System.out.println(result.toString());
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -61,6 +75,7 @@ public class RequestUtils {
             }
             connection.disconnect();
         }
+        return resultData;
     }
 
 
