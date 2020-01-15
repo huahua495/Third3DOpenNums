@@ -211,8 +211,8 @@ public class XinJiangLottery {
                 sscIntervalList.add(new SSCInterval("组选120", total_120, interval_120,
                         mList.size() - interval_120.getLast()
                 ));
-                /*sscIntervalList.add(new SSCInterval("组选60", total_60, interval_60,
-                        mList.size() - interval_60.getLast()));*/
+                sscIntervalList.add(new SSCInterval("组选60", total_60, interval_60,
+                        mList.size() - interval_60.getLast()));
                 sscIntervalList.add(new SSCInterval("组选30", total_30, interval_30,
                         mList.size() - interval_30.getLast()));
                 sscIntervalList.add(new SSCInterval("组选20", total_20, interval_20,
@@ -233,8 +233,8 @@ public class XinJiangLottery {
                 /**
                  * 前三
                  */
-              /*  sscIntervalList.add(new SSCInterval("前三组六", total_qiansan_6, interval_qiansan_6,
-                        mList.size() - interval_qiansan_6.getLast()));*/
+                sscIntervalList.add(new SSCInterval("前三组六", total_qiansan_6, interval_qiansan_6,
+                        mList.size() - interval_qiansan_6.getLast()));
                 sscIntervalList.add(new SSCInterval("前三组三", total_qiansan_3, interval_qiansan_3,
                         mList.size() - interval_qiansan_3.getLast()));
                 sscIntervalList.add(new SSCInterval("前三豹子", total_qiansan_leopard,
@@ -245,8 +245,8 @@ public class XinJiangLottery {
                 /**
                  * 中三
                  */
-                /*sscIntervalList.add(new SSCInterval("中三组六", total_zhongsan_6, interval_zhongsan_6,
-                        mList.size() - interval_zhongsan_6.getLast()));*/
+                sscIntervalList.add(new SSCInterval("中三组六", total_zhongsan_6, interval_zhongsan_6,
+                        mList.size() - interval_zhongsan_6.getLast()));
                 sscIntervalList.add(new SSCInterval("中三组三", total_zhongsan_3, interval_zhongsan_3,
                         mList.size() - interval_zhongsan_3.getLast()));
                 sscIntervalList.add(new SSCInterval("中三豹子", total_zhongsan_leopard, interval_zhongsan_leopard,
@@ -254,8 +254,8 @@ public class XinJiangLottery {
                 /**
                  * 后三
                  */
-               /* sscIntervalList.add(new SSCInterval("后三组六", total_housan_6, interval_housan_6,
-                        mList.size() - interval_housan_6.getLast()));*/
+                sscIntervalList.add(new SSCInterval("后三组六", total_housan_6, interval_housan_6,
+                        mList.size() - interval_housan_6.getLast()));
                 sscIntervalList.add(new SSCInterval("后三组三", total_housan_3, interval_housan_3,
                         mList.size() - interval_housan_3.getLast()));
                 sscIntervalList.add(new SSCInterval("后三豹子", total_housan_leopard, interval_housan_leopard,
